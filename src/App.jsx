@@ -1,33 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from 'react-redux'
+import {increment,decrement,multiplyX2} from './app/features/counter/counterSlice';
+import 'boxicons'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const count = useSelector((state) => state.counter.value)
+  const dispatch = useDispatch()
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    //EJEMPLOS
+   /* <div className='font'>
+      <h1>Hola mundo<box-icon type='solid' name='castle'></box-icon></h1>
+      <button> <Link to="instagram" relative="path">Instagram</Link></button>
+
+      <button onClick={() => dispatch(increment())}>Suma +1</button>
+      <button onClick={() => dispatch(decrement())}>Resta -1</button>
+      <button onClick={() => dispatch(multiplyX2())}>Multiplica x2</button>
+      
+    <p>Valor: {count}</p>
+
+    </div> */
+    <div>
+      <h1>Hola mundo</h1>
     </div>
+
+
   )
 }
 
