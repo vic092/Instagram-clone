@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux'
 import {increment,decrement,multiplyX2} from './app/features/counter/counterSlice';
-import 'boxicons'
+
 
 function App() {
   const count = useSelector((state) => state.counter.value)

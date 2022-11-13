@@ -1,31 +1,62 @@
-.container{
+@import "./variables";
+.container {
   height: 100vh;
-  margin: auto;
+  margin: 5rem;
   width: 90%;
 }
 
-.row{
+.row {
   align-items: center;
   display: flex;
   justify-content: center;
   height: 100vh;
 }
-.container__form{
+
+.container__form {
   margin: 1rem;
-  border: 1px #d2d1d1 solid;
+  border: 1px $bordes solid;
   width: 25rem;
+  & a {
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+  }
+
+  & a[href="#"] {
+    color: $textoAzul;
+    font-weight: bolder;
+    font-size: 0.9rem;
+  }
+
+  & a[href="##"] {
+    font-size: 0.8rem;
+    color: $textoNegro;
+  }
 }
-.colum{
+
+.colum .container__form {
   display: flex;
   flex-direction: column;
   border-radius: 2px;
+
+  & img {
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
-.form{
+.facebook {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+.form {
   padding: 2.5rem;
   text-align: center;
   font-size: 1rem;
-  & input{
+  & input {
     width: 100%;
     padding: 0.5rem;
     border-radius: 5px;
@@ -33,17 +64,70 @@
     border: 1px #d2d1d1 solid;
     outline: none;
     height: 2.5rem;
-    &:active{
+    &:active {
       border: 1px solid #9b9a9a;
-     }
-    &:focus{
+    }
+    &:focus {
       border: 1px solid #9b9a9a;
     }
   }
-
-  & button{
+  & button {
     width: 100%;
     margin: 0.4rem;
   }
+  & hr {
+    color: #9b9a9a;
+    margin: 1.5rem 0.4rem 0 0.4rem;
+    width: 100%;
+  }
+}
 
+.registro {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  border: 1px $bordes solid;
+  width: 25rem;
+  padding: 1.7rem;
+
+  & span {
+    font-size: 0.9rem;
+
+    & a {
+      text-decoration: none;
+      color: $primary;
+      font-weight: 600;
+    }
+  }
+}
+
+@mixin alinearFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aplicacion {
+  @include alinearFlex();
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+  
+  & .botonesApp {
+    display: flex;
+    margin: 1rem;
+    justify-content: center;
+    width: 100%;
+
+    & button{
+      border: none;
+    }
+
+    & #playStore{
+      margin-right: 1rem;
+    }
+
+    & #mStore{
+      margin-left: 1rem;
+    }
+  }
 }

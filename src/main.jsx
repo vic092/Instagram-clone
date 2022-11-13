@@ -7,6 +7,7 @@ import { store } from './app/store'
 import { Provider } from 'react-redux'
 import './styles/main.scss';
 import { Login } from './pages/Login';
+import 'boxicons'
 
 const router = createBrowserRouter([
   {
