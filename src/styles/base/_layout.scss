@@ -1,0 +1,49 @@
+.container{
+  height: 100vh;
+  margin: auto;
+  width: 90%;
+}
+
+.row{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+.container__form{
+  margin: 1rem;
+  border: 1px #d2d1d1 solid;
+  width: 25rem;
+}
+.colum{
+  display: flex;
+  flex-direction: column;
+  border-radius: 2px;
+}
+
+.form{
+  padding: 2.5rem;
+  text-align: center;
+  font-size: 1rem;
+  & input{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin: 0.4rem;
+    border: 1px #d2d1d1 solid;
+    outline: none;
+    height: 2.5rem;
+    &:active{
+      border: 1px solid #9b9a9a;
+     }
+    &:focus{
+      border: 1px solid #9b9a9a;
+    }
+  }
+
+  & button{
+    width: 100%;
+    margin: 0.4rem;
+  }
+
+}
